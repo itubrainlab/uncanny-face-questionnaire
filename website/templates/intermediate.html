@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+
+{% block title %}Intermediate{% endblock %}
+
+{% block content%}
+<h1>Thank you for rating part of our image set</h1>
+<h2>You are doing science a great service!</h2>
+<p>
+    At least, you are helping me a great deal.
+    You now have the possibility of ending the survey here, and go to answer 3 final questions about yourself.
+</p>
+<p>
+    You can also continue and rate a few more images. It is up to you, and your participation is much appreciated!
+</p>
+<img src="/static/images/Kirby.png" alt="cute face :)" class="cute"/>
+<form method="POST">
+    <div class="nextdiv">
+        <button type="submit" class="btn" name="action" value="more">Do 5 more images</button>
+    </div>
+    <div class="prevdiv">
+        <button type="submit" class="btn" name="action" value="end">End survey</button>
+    </div>
+</form> 
+
+
+{% endblock%}

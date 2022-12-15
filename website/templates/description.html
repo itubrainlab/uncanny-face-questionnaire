@@ -1,0 +1,103 @@
+{% extends "base.html" %} 
+
+{% block title %}Description{% endblock %}
+
+{% block content%}
+<h1>Survey on: <br/> Perception of video game characters</h1>
+<h2>Preparation before the survey starts</h2>
+<p> 
+    To give you a sense of the range of what you will see. Please take a look at the image below.
+    Similar images will be used in the questionnaire.
+</p>
+<h3>Example images</h3>
+<img src="/static/images/Collage.png" alt="Example collage" class="collage"> 
+<hr>
+<h3>Explanation of the questions</h3>
+<p>
+    You will be rating each image on a scale between two descriptions.
+</p>
+<p>
+    The scales are written here with definitions:
+</p>
+<p>
+    <u>Fictional - Real</u><br/>
+    <blockquote>Fictional: invented for the purposes of fiction.</blockquote>
+    <blockquote>Real: not imitation or artificial - genuine.</blockquote>
+</p>
+<p>
+    <u>Human-made - Human-like</u> <br/>
+    <blockquote>Human-made: made by a human.</blockquote>
+    <blockquote>Human-like: looking and behaving like a human.</blockquote>
+</p>
+<p>
+    <u>Eerie - Ordinary</u><br/>
+    <blockquote>Eerie: strange <b>and</b> frightening.</blockquote>
+    <blockquote>Ordinary: with no special or distinctive features - normal.</blockquote>
+</p>
+<p>
+    <u>Unsettling - Plain</u> <br/>
+    <blockquote>Unsettling: causing anxiety or uneasiness - disturbing.</blockquote>
+    <blockquote>Plain: not beautiful or attractive, simple or basic.</blockquote>
+</p>
+<p>
+    <u>Creepy - Dull</u> <br/>
+    <blockquote>Creepy: causing an unpleasant feeling of fear or unease.</blockquote>
+    <blockquote>Dull: lacking interest or excitement.</blockquote>
+</p>
+<p>
+    <u>Hair-raising - Unemotional</u> <br/>
+    <blockquote>Hair-raising: alarming, astonishing, or frightening, makes your hair stand up.</blockquote>
+    <blockquote>Unemotional: not giving strong feelings.</blockquote>
+</p>
+<p>
+    <u>Hostile - Friendly</u> <br/>
+    <blockquote>Hostile: showing or feeling opposition or dislike.</blockquote>
+    <blockquote>Friendly: kind and pleasant.</blockquote>
+</p>
+<p>
+    <u>Grumpy - Cheerful</u> <br/>
+    <blockquote>Grumpy: bad-tempered and irritable.</blockquote>
+    <blockquote>Cheerful: noticeably happy and optimistic.</blockquote>
+</p>
+<p>
+    <u>Cold-hearted - Warm-hearted</u> <br/>
+    <blockquote>Cold-hearted: lacking affection or warmth - unfeeling.</blockquote>
+    <blockquote>Warm-hearted: sympathetic and kind.</blockquote>
+</p>
+<p>
+    If the character doesn't fit either of the descriptions,
+    pick the one that is the closest. 
+    The scales are the same for all images. <br/>
+</p>
+
+<hr>
+
+<h3>A little info on you</h3>
+<p>Please fill in the following information, and then start the survey.</p>
+<form class="Info" method="POST">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="0" max="100"> <br>
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+        <option value="0">-</option>
+        <option value="1">Female</option>
+        <option value="2">Male</option>
+        <option value="3">Other</option>
+    </select><br>
+    <label for="english">Is English your first language?:</label>
+    <select id="english" name="english">
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select><br>
+    <label for="understood">
+        Please confirm you have read and understood the above information. <br/>
+        By checking this box, you also agree to allow your data to be used and shared for 
+        academic purposes. There will not be kept any additional information other than what is explicitely submitted in the forms,
+        and the time stamps for submission. There will be kept no identifiable or otherwise GDPR-sensitive data.
+    </label><br/>
+    <input type="checkbox" id="understood" class="checkbox" required>
+    <div class="nextdiv">
+        <button type="submit" class="btn" >Begin</button>
+    </div>
+</form> 
+{% endblock%}

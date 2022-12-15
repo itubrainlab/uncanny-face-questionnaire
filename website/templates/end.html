@@ -1,0 +1,42 @@
+{% extends "base.html" %} 
+{% block title %}Preparation{% endblock %}
+
+{% block content%}
+<h1>Thank you for participation in our survey!</h1>
+
+<p>
+    Before leaving, please answer a few final questions about yourself
+</p>
+<hr>
+<form class="ending_qs" method="POST">
+    <label for="animation_experience">How often do you watch movies or play video games with animated characters?</label><br>
+    <select id="animation_experience" name="animation_experience">
+        <option value="3">Every day</option>
+        <option value="2">Every week</option>
+        <option value="1">Every month</option>
+        <option value="0">Almost never</option>
+    </select><br>
+    <label for="animation_expert">How would you rate your level of competence in computer animation?</label><br>
+    <select id="animation_expert" name="animation_expert">
+        <option value="3">Experienced</option>
+        <option value="2">Beginner</option>
+        <option value="1">Tried it once</option>
+        <option value="0">Never done animation</option>
+    </select><br>
+    <label for="uncanny_valley">Are you familiar of the uncanny valley phenomenon?</label><br>
+    <select id="uncanny_valley" name="uncanny_valley">
+        <option value="2">Know it well</option>
+        <option value="1">Heard of it</option>
+        <option value="0">Never heard of it before</option>
+    </select><br>
+    <div class="slider">
+        <label for="familiarity">How many of the characters you rated have you seen before?</label><br>
+        <span class="left">None</span> 
+        <input type="range" min="1" max="100" step="1" name="familiarity">
+        <span class="right">All</span> 
+    </div>
+    <div class="nextdiv">
+        <button type="submit" class="btn" >Submit survey</button>
+    </div>
+</form> 
+{% endblock%}

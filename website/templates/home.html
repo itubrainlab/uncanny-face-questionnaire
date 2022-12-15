@@ -1,0 +1,58 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %}
+
+{% block content%}
+<h1>Survey on: <br/> Perception of animated video game characters</h1>
+
+<h3>
+    How do we react to different styles of characters?
+</h3>
+
+<div>
+    <div class="text-box">
+        <p>
+            There are a myriad of ways to animate characters in computer games and movies.
+        </p>
+        <p>
+            To better understand how people react to these different characters, 
+            we have made a survey with pictures from different well-known movies and games.
+        </p>
+        <p>
+            You can greatly help our work by answering a few questions about some of the characters. 
+            The questionnaire only takes 10 minutes with the option of continuing, if you have the time.
+        </p>
+    </div>
+    
+    <img src="/static/images/Brave.jpeg" alt="Example image" class="example-img"/>
+</div>
+<h3>
+    Project description
+</h3>
+<p>
+    This survey is part of a bigger project on the perception of animated faces.
+    The answers from this survey is going to be used for an EEG study, where we record
+    brain activity of people looking at these characters. 
+</p>
+    
+<p>
+    The project is part of my (Laurits Dixen) PhD project, supervised by Paolo Burelli. 
+    <br/>
+    You can reach me at <a href="mailto:ldix@itu.dk">ldix@itu.dk</a> or Paolo at <a href="mailto:pabu@itu.dk">pabu@itu.dk</a>, if you have any questions, concerns or comments.
+    We are more than happy to talk about the project. 
+    Also a special thanks to Chiara Gorlini, who has played an indispensable role in preparing this survey!
+</p>
+
+<p>
+    The images used here are not owned by us and are used for educational and scientific purposes only. 
+    Some images are adapted from the Face Research Lab London Set, reference can be found here: https://doi.org/10.6084/m9.figshare.5047666.v5.
+</p>
+
+<div class="nextdiv">
+    <button onclick="window.location.href='/description'" class="btn">
+        Get started →
+    </button>
+</div>
+
+
+
+{% endblock%}

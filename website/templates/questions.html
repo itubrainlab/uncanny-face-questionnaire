@@ -1,0 +1,196 @@
+{% extends "base.html" %} 
+{% block title %}Questions{% endblock %}
+
+{% block content%}
+<h2>Please rate the character</h2>
+<img src="{{imgfile}}" alt="Face" class="stim">
+
+<form class="questionnaire" method="POST">
+
+<table>
+    <tr>
+        <td class="left">Fictional</td>
+        <td>
+        <div class="contain">
+        <input type="radio" name="real" value="1" required>
+        <input type="radio" name="real" value="2">
+        <input type="radio" name="real" value="3">
+        <input type="radio" name="real" value="4">
+        <input type="radio" name="real" value="5">
+        <input type="radio" name="real" value="6">
+        <input type="radio" name="real" value="7">
+        </div>
+        </td>
+        <td class="left">Real</td>
+    </tr>
+    <tr>
+        <td class="left">Human-made</td>
+        <td>
+        <div class="contain">
+        <input type="radio" name="humanlike" value="1" required>
+        <input type="radio" name="humanlike" value="2">
+        <input type="radio" name="humanlike" value="3">
+        <input type="radio" name="humanlike" value="4">
+        <input type="radio" name="humanlike" value="5">
+        <input type="radio" name="humanlike" value="6">
+        <input type="radio" name="humanlike" value="7">
+        </div></td>
+        <td class="left">Human-like</td>
+    </tr>
+    <tr>
+        <td class="left">Eerie</td>
+        <td><div class="contain">
+        <input type="radio" name="eerie" value="1" required>
+        <input type="radio" name="eerie" value="2">
+        <input type="radio" name="eerie" value="3">
+        <input type="radio" name="eerie" value="4">
+        <input type="radio" name="eerie" value="5">
+        <input type="radio" name="eerie" value="6">
+        <input type="radio" name="eerie" value="7">
+        </div></td>
+        <td class="left">Ordinary</td>
+        </tr>
+        <tr>
+        <td class="left">Unsettling</td>
+        <td><div class="contain">
+        <input type="radio" name="unsettling" value="1" required>
+        <input type="radio" name="unsettling" value="2">
+        <input type="radio" name="unsettling" value="3">
+        <input type="radio" name="unsettling" value="4">
+        <input type="radio" name="unsettling" value="5">
+        <input type="radio" name="unsettling" value="6">
+        <input type="radio" name="unsettling" value="7">
+        </div></td>
+        <td class="left">Plain</td>
+        </tr>
+        <tr>
+        <td class="left">Creepy</td>
+        <td><div class="contain">
+        <input type="radio" name="creepy" value="1" required>
+        <input type="radio" name="creepy" value="2">
+        <input type="radio" name="creepy" value="3">
+        <input type="radio" name="creepy" value="4">
+        <input type="radio" name="creepy" value="5">
+        <input type="radio" name="creepy" value="6">
+        <input type="radio" name="creepy" value="7">
+    </div></td>
+        <td class="left">Dull</td>
+        </tr>
+        <tr>
+        <td class="left">Hair-raising</td>
+        <td><div class="contain">
+        <input type="radio" name="hairraising" value="1" required>
+        <input type="radio" name="hairraising" value="2">
+        <input type="radio" name="hairraising" value="3">
+        <input type="radio" name="hairraising" value="4">
+        <input type="radio" name="hairraising" value="5">
+        <input type="radio" name="hairraising" value="6">
+        <input type="radio" name="hairraising" value="7">
+    </div></td>
+        <td class="left">Unemotional</td>
+        </tr>
+        <tr>
+        <td class="left">Hostile</td>
+        <td><div class="contain">
+        <input type="radio" name="friendly" value="1" required>
+        <input type="radio" name="friendly" value="2">
+        <input type="radio" name="friendly" value="3">
+        <input type="radio" name="friendly" value="4">
+        <input type="radio" name="friendly" value="5">
+        <input type="radio" name="friendly" value="6">
+        <input type="radio" name="friendly" value="7">
+    </div></td>
+        <td class="left">Friendly</td>
+        </tr>
+        <tr>
+        <td class="left">Grumpy</td>
+        <td><div class="contain">
+        <input type="radio" name="cheerful" value="1" required>
+        <input type="radio" name="cheerful" value="2">
+        <input type="radio" name="cheerful" value="3">
+        <input type="radio" name="cheerful" value="4">
+        <input type="radio" name="cheerful" value="5">
+        <input type="radio" name="cheerful" value="6">
+        <input type="radio" name="cheerful" value="7">
+    </div></td>
+        <td class="left">Cheerful</td>
+        </tr>
+        <tr>
+        <td class="left">Cold-hearted</td>
+        <td><div class="contain">
+        <input type="radio" name="warmhearted" value="1" required>
+        <input type="radio" name="warmhearted" value="2">
+        <input type="radio" name="warmhearted" value="3">
+        <input type="radio" name="warmhearted" value="4">
+        <input type="radio" name="warmhearted" value="5">
+        <input type="radio" name="warmhearted" value="6">
+        <input type="radio" name="warmhearted" value="7">
+    </div></td>
+        <td class="left">Warm-hearted</td>
+        </tr>
+
+</table>
+
+<div class="nextdiv">
+    <button type="submit" class="btn" >Next</button>
+</div>
+
+
+
+<br/>
+<a href="#explanation"> <h3>What do the terms mean?</h3></a>
+
+<div id="explanation">
+<a href="/questions"> <span>Hide explanations</span></a>
+<p>
+    <u>Fictional - Real</u><br/>
+    <blockquote>Fictional: invented for the purposes of fiction.</blockquote>
+    <blockquote>Real: not imitation or artificial - genuine.</blockquote>
+</p>
+<p>
+    <u>Human-made - Human-like</u> <br/>
+    <blockquote>Human-made: made by a human.</blockquote>
+    <blockquote>Human-like: looking and behaving like a human.</blockquote>
+</p>
+<p>
+    <u>Eerie - Ordinary</u><br/>
+    <blockquote>Eerie: strange <b>and</b> frightening.</blockquote>
+    <blockquote>Ordinary: with no special or distinctive features - normal.</blockquote>
+</p>
+<p>
+    <u>Unsettling - Plain</u> <br/>
+    <blockquote>Unsettling: causing anxiety or uneasiness - disturbing.</blockquote>
+    <blockquote>Plain: not beautiful or attractive, simple or basic.</blockquote>
+</p>
+<p>
+    <u>Creepy - Dull</u> <br/>
+    <blockquote>Creepy: causing an unpleasant feeling of fear or unease.</blockquote>
+    <blockquote>Dull: lacking interest or excitement.</blockquote>
+</p>
+<p>
+    <u>Hair-raising - Unemotional</u> <br/>
+    <blockquote>Hair-raising: alarming, astonishing, or frightening, makes your hair stand up.</blockquote>
+    <blockquote>Unemotional: not giving strong feelings.</blockquote>
+</p>
+<p>
+    <u>Hostile - Friendly</u> <br/>
+    <blockquote>Hostile: showing or feeling opposition or dislike.</blockquote>
+    <blockquote>Friendly: kind and pleasant.</blockquote>
+</p>
+<p>
+    <u>Grumpy - Cheerful</u> <br/>
+    <blockquote>Grumpy: bad-tempered and irritable.</blockquote>
+    <blockquote>Cheerful: noticeably happy and optimistic.</blockquote>
+</p>
+<p>
+    <u>Cold-hearted - Warm-hearted</u> <br/>
+    <blockquote>Cold-hearted: lacking affection or warmth - unfeeling.</blockquote>
+    <blockquote>Warm-hearted: sympathetic and kind.</blockquote>
+</p>
+</div>
+
+</form>
+<br/>
+
+
+{% endblock%}
