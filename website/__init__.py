@@ -43,6 +43,7 @@ def create_app():
     if not path.exists(path.join(INSTANCE_FOLDER, CATALOGUE_NAME)):
         make_image_catalogue()
         print('Created image catalogue!', file=sys.stdout)
+
     # Init app
     app = Flask(__name__, template_folder='templates', static_folder='static')
     app.config['SECRET_KEY'] = 'nL32Ex0ZpV1cIw7KFcjW'
@@ -56,9 +57,9 @@ def create_app():
 
     # Import and init database models
     from .models import User, Rating, Submit
-    if not path.exists(path.join(INSTANCE_FOLDER, DB_NAME)):
-        with app.app_context():
+    with app.app_context():
+        if not db.engine.has_table("user"):
             db.create_all()
-        print('Created Database!', file=sys.stdout)
+            print('Created Database!', file=sys.stdout)
 
     return app

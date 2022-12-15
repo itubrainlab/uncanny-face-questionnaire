@@ -23,7 +23,7 @@ if __name__ == '__main__':
     if not path.exists(EXPORT_FOLDER):
         mkdir(EXPORT_FOLDER)
 
-    with sqlite3.connect(path.join(website.INSTANCE_FOLDER, website.DB_NAME)) as conn:
+    with sqlite3.connect(path.join('website', website.DB_NAME)) as conn:
         cur = conn.cursor()
         table_to_csv(timestamp, cur, 'user')
         table_to_csv(timestamp, cur, 'rating')

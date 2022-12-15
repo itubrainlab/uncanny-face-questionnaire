@@ -1,0 +1,13 @@
+server {
+	listen 80;
+	server_name 30.226.140.46;
+	location /static {
+	alias /opt/questionnaire/website/static;
+	}
+
+location / {
+	proxy_pass http://localhost:8000;
+	include /etc/nginx/proxy_params;
+	proxy_redirect off;
+	}
+}
