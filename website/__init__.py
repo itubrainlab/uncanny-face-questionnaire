@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from os import path
+from os import path, mkdir
 from pathlib import Path
 import sys
 
@@ -34,6 +34,9 @@ def make_image_catalogue():
         outfile.write(json_object)
 
 def create_app():
+    if not path.exists("instance"):
+        mkdir("instance")
+
     if not path.exists('instance/' + CATALOGUE_NAME):
         make_image_catalogue()
         print('Created image catalogue!', file=sys.stdout)
