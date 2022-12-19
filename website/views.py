@@ -19,7 +19,7 @@ with open("instance/"+CATALOGUE_NAME, "r") as infile:
 
 def get_image_id(seed, i):
     random.seed(seed)
-    possible_ids = list(range(max))
+    possible_ids = list(range(1,max+1))
     random.shuffle(possible_ids)
     return possible_ids[i]
 
